@@ -1,0 +1,12 @@
+{
+  "domain": "openai_usage",
+  "name": "OpenAI Usage Monitor",
+  "version": "1.0.0",
+  "documentation": "https://github.com/your-repo/openai_usage",
+  "requirements": ["aiohttp"],
+  "dependencies": [],
+  "codeowners": [],
+  "config_entries": [{"domain": "openai_usage"}],
+  "homeassistant": "2025.9.0",
+  "integration_type": "sensor"
+}
