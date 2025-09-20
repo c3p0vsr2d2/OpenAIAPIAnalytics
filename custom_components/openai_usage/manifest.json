@@ -1,9 +1,9 @@
 {
   "domain": "openai_usage",
   "name": "OpenAI Usage Monitor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "documentation": "https://github.com/your-repo/openai_usage",
-  "requirements": ["aiohttp"],
+  "requirements": ["aiohttp", "voluptuous"],
   "dependencies": [],
   "codeowners": [],
   "config_entries": [{"domain": "openai_usage"}],
