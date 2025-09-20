@@ -1,14 +1,12 @@
-"""OpenAI Usage Monitor integration."""
-
+"""OpenAI Usage Monitor - GUI only."""
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
+from homeassistant.core import HomeAssistant
 from .api import OpenAIUsageClient
 from .const import DOMAIN
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
-    """Set up OpenAI Usage Monitor from config entry."""
-    api_key = entry.data.get("api_key")
+    api_key = entry.data["api_key"]
     update_interval = entry.data.get("update_interval", 3600)
     client = OpenAIUsageClient(api_key)
 
@@ -26,9 +24,5 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
 
     await coordinator.async_refresh()
     hass.data.setdefault(DOMAIN, {})[entry.entry_id] = coordinator
-
-    hass.async_create_task(
-        hass.config_entries.async_forward_entry_setup(entry, "sensor")
-    )
-
+    hass.async_create_task(hass.config_entries.async_forward_entry_setup(entry, "sensor"))
     return True
