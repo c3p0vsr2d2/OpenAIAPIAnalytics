@@ -9,14 +9,16 @@ class OpenAIUsageClient:
         self.api_key = api_key
 
     async def get_usage(self, days: int = 365):
+        """Fetch usage data for the past `days` days."""
         today = date.today()
         start_date = today - timedelta(days=days - 1)
+        end_date = today
 
         headers = {"Authorization": f"Bearer {self.api_key}"}
 
         async with aiohttp.ClientSession() as session:
             async with session.get(
-                f"{USAGE_URL}?start_date={start_date}&end_date={today}",
+                f"{USAGE_URL}?start_date={start_date}&end_date={end_date}",
                 headers=headers,
                 timeout=30,
             ) as resp:
