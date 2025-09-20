@@ -1,0 +1,8 @@
+{
+	"name": "OpenAI Usage Monitor",
+	"domains": [
+		"sensor", "switch"
+	],
+	"country": "US",
+	"iot_class": "local_push"
+}
