@@ -1,11 +1,18 @@
 {
   "domain": "openai_usage",
   "name": "OpenAI Usage Monitor",
-  "version": "1.0.3",
-  "documentation": "https://github.com/c3p0vsr2d2/OpenAIAPIAnalytics",
-  "requirements": ["aiohttp", "voluptuous"],
+  "version": "1.2.0",
+  "documentation": "https://github.com/your-repo/openai_usage",
+  "requirements": [
+    "aiohttp",
+    "voluptuous"
+  ],
   "dependencies": [],
   "codeowners": [],
-  "config_entries": [{"domain": "openai_usage"}],
+  "config_entries": [
+    {
+      "domain": "openai_usage"
+    }
+  ],
   "homeassistant": "2023.8.0"
 }
