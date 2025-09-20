@@ -7,6 +7,6 @@
   "dependencies": [],
   "codeowners": [],
   "config_entries": [{"domain": "openai_usage"}],
-  "homeassistant": "2025.9.0",
-  "integration_type": "sensor"
+  "integration_type": "hub",
+  "homeassistant": "2023.8.0"
 }
